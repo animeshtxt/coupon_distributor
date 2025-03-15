@@ -19,6 +19,8 @@ const CouponClaim = require("./models/couponClaims.js");
 
 app.set("view engine", "ejs");
 app.set("views", path.join(__dirname, "views"));
+app.set("trust proxy", true); // Trust reverse proxy
+
 app.use(express.urlencoded({ extended: true }));
 app.use(
   cors({

@@ -1,5 +1,4 @@
 const mongoose = require("mongoose");
-const Coupon = require("./coupons.js");
 const TIME = process.env.TIME;
 const couponClaimSchema = new mongoose.Schema({
   coupon: {

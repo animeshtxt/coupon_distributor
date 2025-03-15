@@ -20,7 +20,7 @@ module.exports.checkIpAbuse = async (req, res, next) => {
       });
     }
 
-    const userIp = req.ip;
+    const userIp = req.headers["x-forwarded-for"] || req.ip;
     const userAgent = req.headers["user-agent"];
 
     // Check MongoDB if user has claimed a coupon in the last hour
