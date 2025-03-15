@@ -70,7 +70,7 @@ app.post(
   }
 );
 
-app.get("/api/check", checkIpAbuse, (req, res) => {
+app.post("/api/check", checkIpAbuse, (req, res) => {
   res.json({ coupon: null, timeLeft: 0 });
 });
 
